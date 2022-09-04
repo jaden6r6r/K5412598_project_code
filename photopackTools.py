@@ -28,7 +28,7 @@ class PhotopackTools:
                     # Write bytes to file
                     binary_file.write(img["image"])
 
-    def construct(self, path, dir=None):
+    def construct(self, path, new_file_path,dir=None):
         """
         This method is to be used at the end of the process, it accepts a path to a pdf as well as a directory as an argument and will reconstruct the original .pdf with the images output from the blurring stage.
         """
@@ -47,7 +47,7 @@ class PhotopackTools:
                     filename="./img/complete/{}_edit.png".format(image[0]),
                     keep_proportion=False,
                 )
-        doc.save("./output.pdf")
+        doc.save(new_file_path)
         doc.close()
 
 

@@ -11,7 +11,7 @@ def imgDetect(imgPath: str, imgName: str):
     model = torch.hub.load(
         'ultralytics/yolov5',
         'custom',
-        path='./yolov5/runs/train/yolo_reg_det_05_01_150_epochs3/weights/best.pt',
+        path='./best.pt',
     )
     model.conf = 0.05
 
